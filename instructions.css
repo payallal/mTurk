@@ -1,0 +1,38 @@
+#paragraph {
+	background: #D8D8D8;
+	border: 1px solid #979797;
+	width: 800px;
+	border-radius: 27px;
+	font-family: HelveticaNeue-Light;
+	font-size: 20px;
+	color: #4A4A4A;
+	letter-spacing: 1.89px;
+	line-height: 44px;
+	margin-left: 80px;
+	margin-right: 80px;
+	padding: 30px;
+}
+
+
+
+p {
+	font-family: HelveticaNeue-Thin;
+	font-size: 36px;
+	color: #4A4A4A;
+	letter-spacing: 1px;
+	margin: 40px;
+}
+
+#continue {
+	font-family: HelveticaNeue-LightItalic;
+	font-size: 36px;
+	color: #4A4A4A;
+	letter-spacing: 2.6px;
+	margin-left: 850px;
+	margin-top: 40px;
+	}
+
+#main {
+	margin-left: 100px;
+	margin-right: 100px;
+}
