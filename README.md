@@ -5,13 +5,7 @@
 
 Purpose
 -------
-Psychologists and economists, among other researchers study temporal discounting to better understand the tendency of people to change the way they value rewards depending on the time in which they expect to receive the reward. I initially came up with this simple program built using HTML, CSS and Javascript to run an experiment with Synergy Labs, a psychology research lab at Yale-NUS that studies love. Using this program, we test temporal discounting and its correlation to people's behavior in romantic relationships via Amazon Mechanical Turk. You are free to use this open source tool for experiments and any other non commercial purposes. 
-
-How to use this software
-------------------
-You can use this software in one of two ways:
-1. Download onto your computer (git pull) and use it during lab studies.
-2. Upload to server and put it up online for use during online studies. You can find an example of how the tool looks online [here](https://payallal.github.io/mTurk/). However, I discourage you from using this URL for your experiments in case I decide to move it to another URL in the middle of your experiment (I wouldn't do this on purpose, but it could happen given that I don't actively track if that URL is being used). 
+Psychologists and economists, among other researchers study temporal discounting to better understand the tendency of people to change the way they value rewards depending on the time in which they expect to receive the reward. I initially came up with this tool to run an experiment with Synergy Labs, a psychology research lab at Yale-NUS that studies love. Using this program, we test temporal discounting and its correlation to people's behavior in romantic relationships via Amazon Mechanical Turk. You are free to use this open source tool for experiments and any other non commercial purposes. 
 
 Walk through
 --------
@@ -23,6 +17,12 @@ Here's how the tool works.
 ![Preview](https://github.com/payallal/temporal_discounting/blob/master/Assets/Task2.gif)
 4. Once the player is done with the last set, a thank you page shows up which gives the participant a code to save. This code is valuable information - it not only ensures that your participant completed the task, it contains the information of the options your participant chose during the task. Each number represents the choice your participant clicked on as they went through the task. In the image below for example, your participant selected 10 as his first choice when asked if he's rather have $5 now or $10 in 2 months. Then, when the choice changed (presumably to offer his $7.5 now or $10 in 2 months), he again selected $10. Note that after every 5 values in the array, the participant is in a new set. So the sixth value in the image below for example is your participants' answer to 'would you have $5 now or $10 in 3 months?'. Play the game yourself a few times to better understand the choices these numbers are conveying. 
 ![alt text](https://github.com/payallal/temporal_discounting/blob/master/Assets/Thanks.png)
+
+How to use this software
+------------------
+This tool is built using HTML, CSS and Javascript. You can use it in one of two ways:
+1. Download onto your computer (git pull) and use it during lab studies.
+2. Upload to server and put it up online for use during online studies. You can find an example of how the tool looks online [here](https://payallal.github.io/mTurk/). However, I discourage you from using this URL for your experiments in case I decide to move it to another URL in the middle of your experiment (I wouldn't do this on purpose, but it could happen given that I don't actively track if that URL is being used). 
 
 Technical Instructions
 ----------
