@@ -31,4 +31,4 @@ Once you have this downloaded on your computer or running on your server, start 
 In case you'd like to make modifications to the tool, here's a few pointers:
 1. Instructions: To modify instructions, look under the 'paragraph' div in index.html
 2. Style: Instructions.css contains all the styling of the instructions (or index.html) page, and task.css contains the styling of the main task. 
-3. Values provided during the task: The game starts with the option of $5 vs $10. You can change this by modifying the variables in task.html. However, I would discourage you from trying to do this unless you're experience with JavaScript. 
+3. Values provided during the task: The game starts with the option of $5 vs $10. You can change this by modifying the variables in task.html. However, I would discourage you from trying to do this unless you're experienced with JavaScript. 
