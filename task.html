@@ -1,0 +1,141 @@
+<html>
+<link rel="stylesheet" type="text/css" href="task.css">
+<body> 
+
+<div class="Set"> </div>
+
+<div id="checkGuess">  </div>
+
+<div id="parent">
+
+<p> Do you prefer.. </p>
+
+
+
+<div class="optionOne">   
+	<div class="dollar">$ </div> 
+	<div class="variable"> </div> 
+	<div class="now"> now </div>
+</div> 
+
+<div id="or"> OR </div>
+
+<div class="optionTwo"> 
+	<div class="dollar">$ </div>
+	<div class="max">  </div> <br>
+ 	<div class="intext"> in </div>  
+ 	<div class="months">  </div>  
+ 	<div class="monthstext"> months </div> 
+</div>
+
+</div>
+
+</div>
+<div id="thanks"> 
+	Thanks for completing the task! To claim your reward, copy and paste the code below into the MTurk survey.
+	<div class="data"> </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+var option2 = document.querySelector ('.max')
+option2.innerText = 10 /*set card 2 to 10*/
+
+var option1 = document.querySelector ('.variable')
+
+
+function select_variable() {
+	option1.innerText = 5 /*set card 1 to 5 */
+	var i=months-1
+	Set(i)
+	console.log(i)
+}
+
+
+/*function that tells the user they're entering a new set of trials*/
+
+function Set(i) {
+	var setnum = document.querySelector('.set')
+	setnum.innerText = "Set " + i
+	var $set = $(".set")
+	$set.show()
+	setTimeout(function() {
+		$set.hide();
+	}, 1500);
+
+}
+/*Set1 - 2 months*/
+var months = 2
+var num_months = document.querySelector ('.months')
+num_months.innerText = months
+
+
+var data =[]
+var counter = 0
+var lowest_option_1 = 0
+var last_option_1 = 10
+var temp_option1 = 5
+
+select_variable()
+
+function thanks() {
+	document.getElementById('thanks').style.display = 'block';
+	document.getElementById('parent').style.display = 'none';
+	var showdata = document.querySelector ('.data')
+	showdata.innerText = data
+
+}
+
+
+	$('div.optionOne').click(function click_variable(){
+		if (counter<=5 && months <=6) {
+			data.push(option1.innerText)
+			last_option_1 = option1.innerText
+			option1.innerText = option1.innerText - (option1.innerText - lowest_option_1)/2
+			option2.innerText = 10
+			counter++
+		}
+		if (counter>=6 && months<6) {
+			months = months +1
+			num_months.innerText = months
+			select_variable()
+			counter = 0
+		}
+		if (counter==6 && months ==6) {
+			thanks()
+		}
+		})
+
+	$('div.optionTwo').click(function click_max() {
+		if (counter<=5 && months <=6) {
+			data.push(option2.innerText)
+			lowest_option_1 = option1.innerText
+			var add = (last_option_1-option1.innerText)/2 
+			var original = option1.innerText
+			option1.innerText = parseFloat(add) + parseFloat(original)
+			option2.innerText = 10
+			counter++
+		}
+		if (counter>=6 && months<6) {
+			months = months +1
+			num_months.innerText = months
+			select_variable()
+			counter = 0
+		}
+		if (counter==6 && months ==6) {
+			thanks()
+		}
+	})
+	
+
+
+
+
+
+ </script>
+
+
+</body>
+
+</html>
