@@ -1,4 +1,4 @@
-# Temporal Discounting Experiments on Amazon Mechanical Turk
+# Testing Temporal Discounting on mTurk
 
 Purpose
 -------
