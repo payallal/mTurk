@@ -93,7 +93,7 @@ function thanks() {
 		if (counter<=5 && months <=6) {
 			data.push(option1.innerText)
 			last_option_1 = option1.innerText
-			option1.innerText = option1.innerText - (option1.innerText - lowest_option_1)/2
+			option1.innerText = Math.round((option1.innerText - (option1.innerText - lowest_option_1)/2)*100)/100
 			option2.innerText = 10
 			counter++
 		}
@@ -117,7 +117,7 @@ function thanks() {
 			lowest_option_1 = option1.innerText
 			var add = (last_option_1-option1.innerText)/2 
 			var original = option1.innerText
-			option1.innerText = parseFloat(add) + parseFloat(original)
+			option1.innerText = Math.round((parseFloat(add) + parseFloat(original)) * 100) / 100
 			option2.innerText = 10
 			counter++
 		}
