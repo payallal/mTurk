@@ -85,7 +85,6 @@ p {
 	border: 1px solid #979797;
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.50);
 	border-radius: 8px;
-	float:left;
 	padding: 0px;
 	font-family: HelveticaNeue;
 	font-size: 40px;
@@ -103,7 +102,6 @@ p {
 }
 
 .optionTwo {
-	float:left;
 	height: 400px;
 	width:400px;
 	border: 1px solid #979797;

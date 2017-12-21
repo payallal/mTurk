@@ -10,8 +10,6 @@
 
 <p> Do you prefer.. </p>
 
-
-
 <div class="optionOne">   
 	<div class="dollar">$ </div> 
 	<div class="variable"> </div> 
@@ -49,11 +47,21 @@ function select_variable() {
 	if (months == 5)
 	{
 		option1.innerText = 11
+		document.getElementsByClassName("optionOne")[0].style.cssFloat = "right";
+		document.getElementsByClassName("optionTwo")[0].style.cssFloat = "left";
+		document.getElementById("or").style.cssFloat = "right";
+		document.getElementById("or").style.marginLeft = "-10px";
+		document.getElementById("or").style.marginRight = "80px";
 
 	}
 	else if (months == 4)
 	{
 		option1.innerText = 0
+		document.getElementsByClassName("optionOne")[0].style.cssFloat = "left";
+		document.getElementsByClassName("optionTwo")[0].style.cssFloat = "right";
+		document.getElementById("or").style.cssFloat = "left";
+		document.getElementById("or").style.marginLeft = "50px";
+		document.getElementById("or").style.marginRight = "0px";
 
 	}
 	else 
@@ -141,6 +149,8 @@ function thanks() {
 			else if (months ==6)
 			{
 				months = 4
+				console.log("working")
+				
 				
 			}
 			else if (months ==4)
