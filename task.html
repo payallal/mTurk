@@ -46,23 +46,42 @@ var option1 = document.querySelector ('.variable')
 
 
 function select_variable() {
-	option1.innerText = 5 /*set card 1 to 5 */
-	var i=months-1
-	Set(i)
-	console.log(i)
+	if (months == 5)
+	{
+		option1.innerText = 11
+
+	}
+	else if (months == 4)
+	{
+		option1.innerText = 0
+
+	}
+	else 
+	{
+		num_months.innerText = months
+		option1.innerText = 5 /*set card 1 to 5 */
+		var i=months-1
+		Set(i)
+		console.log(i)
+	}
+	
 }
+
 
 
 /*function that tells the user they're entering a new set of trials*/
 
 function Set(i) {
 	var setnum = document.querySelector('.set')
+	/*
 	setnum.innerText = "Set " + i
+	
 	var $set = $(".set")
 	$set.show()
 	setTimeout(function() {
 		$set.hide();
 	}, 1500);
+*/
 
 }
 /*Set1 - 2 months*/
@@ -90,49 +109,103 @@ function thanks() {
 
 
 	$('div.optionOne').click(function click_variable(){
-		if (counter<=5 && months <=6) {
+		if (counter<=5) {
 			data.push(option1.innerText)
 			last_option_1 = option1.innerText
-			option1.innerText = Math.round((option1.innerText - (option1.innerText - lowest_option_1)/2)*100)/100
-			option2.innerText = 10
-			counter++
+			if (last_option_1 == 11 || last_option_1 == 0)
+			{
+				option1.innerText = 5
+			}
+			else
+			{
+				option1.innerText = Math.round((option1.innerText - (option1.innerText - lowest_option_1)/2)*100)/100
+				option2.innerText = 10
+				counter++
+			}
+			
 		}
-		if (counter>=6 && months<6) {
+		if (counter==6) {
 			lowest_option_1 = 0
 			last_option_1 = 10
 			temp_option1 = 5
-			months = months +1
+			if (months==2)
+			{
+				months = 5
+
+			}
+			else if (months ==5)
+			{
+				months = 6
+				
+			}
+			else if (months ==6)
+			{
+				months = 4
+				
+			}
+			else if (months ==4)
+			{
+				months = 3
+				
+			}
+			else if (months == 3)
+			{
+				thanks()
+			}
 			num_months.innerText = months
 			select_variable()
 			counter = 0
 		}
-		if (counter==6 && months ==6) {
-			thanks()
-		}
+		
 		})
 
 	$('div.optionTwo').click(function click_max() {
-		if (counter<=5 && months <=6) {
+		if (counter<=5) {
 			data.push(option2.innerText)
 			lowest_option_1 = option1.innerText
-			var add = (last_option_1-option1.innerText)/2 
-			var original = option1.innerText
-			option1.innerText = Math.round((parseFloat(add) + parseFloat(original)) * 100) / 100
-			option2.innerText = 10
-			counter++
+			if (lowest_option_1 == 11 || lowest_option_1 == 0)
+			{
+				option1.innerText = 5
+			}
+			else
+			{
+				var add = (last_option_1-option1.innerText)/2 
+				var original = option1.innerText
+				option1.innerText = Math.round((parseFloat(add) + parseFloat(original)) * 100) / 100
+				option2.innerText = 10
+				counter++
+			}
+			
 		}
-		if (counter>=6 && months<6) {
+		if (counter==6) {
 			lowest_option_1 = 0
 			last_option_1 = 10
 			temp_option1 = 5
-			months = months +1
+			if (months==2)
+			{
+				months = 5
+			}
+			else if (months ==5)
+			{
+				months = 6
+			}
+			else if (months ==6)
+			{
+				months = 4
+			}
+			else if (months ==4)
+			{
+				months = 3
+			}
+			else if (months == 3)
+			{
+				thanks()
+			}
 			num_months.innerText = months
 			select_variable()
 			counter = 0
 		}
-		if (counter==6 && months ==6) {
-			thanks()
-		}
+		
 	})
 	
 
